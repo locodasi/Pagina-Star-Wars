@@ -1,0 +1,69 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Wars</title>
+    <link rel="stylesheet" href="starWars.css">
+</head>
+<body>
+
+    <div id="ventanaModal" class="modal">
+        <div class="contenido-modal">
+            <span class="cerrar">&times;</span>
+            <h2 id="tituloModal">Ventana modal</h2>
+            <div class="info" id="infoDiv">
+                <p>Esto es el texto de la ventana</p>
+                <p>Esto es el texto de la ventana</p>
+                <p>Esto es el texto de la ventana</p>
+                <p>Esto es el texto de la ventana</p>
+                <p>Esto es el texto de la ventana</p>
+                <p>Esto es el texto de la ventana</p>
+                <span><b>Aca: </b>
+                    <p>Esto es el texto de la ventana</p>
+                    <p>Esto es el texto de la ventana</p>
+                    <p>Esto es el texto de la ventana</p>
+                </span>
+                <span><b>Aca: </b>
+                    <p>Esto es el texto de la ventana</p>
+                    <p>Esto es el texto de la ventana</p>
+                    <p>Esto es el texto de la ventana</p>
+                </span>
+                <span><b>Aca: </b>
+                    <p>Esto es el texto de la ventana</p>
+                    <p>Esto es el texto de la ventana</p>
+                    <p>Esto es el texto de la ventana</p>
+                </span>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="filmsPage">
+        <header class="head">
+            <button id="episode">Ordenar por episodio</button>
+            <h2 id="title">Bienvenido a la wiki de Star Wars</h2>
+            <button id="date">Ordenar por lanzamiento</button>
+        </header>
+        
+        <div class="films"></div>
+    </div>
+
+    <div id="filmPage" hidden="true">
+        <button id="back">Atras</button>
+        <header class="head" id="pageHeader">
+
+        </header>
+        <div class="filmCard" id="filmCard">
+            <div id="film"></div>
+                
+            <div class="cards" id="cards">
+                
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="starWars.js"></script>
+</body>
+</html>

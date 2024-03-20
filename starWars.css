@@ -1,0 +1,177 @@
+body {
+    background-image: url("extras/fondo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+img {
+    height: 630px;
+    width: 350px;
+}
+
+.head {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    justify-content: center;
+}
+
+#title {
+    color: #fff;
+}
+
+#back {
+    width: 120px;
+    height: 80px;
+}
+
+.head button, #back {
+    border: none;
+    background-color: #0256f3;
+    border-radius: 50%;
+    margin: 0 25px;
+    cursor: pointer;
+}
+
+.head button:hover, #back:hover {
+    box-shadow: 10px 10px 5px #1609d1;
+}
+
+.films {
+    margin: 40px;
+    display: grid;
+    grid-template-columns: 400px 400px 400px;
+    grid-auto-rows: 760px;
+    grid-gap: 5px;
+    padding: 0;
+}
+
+.film {
+    text-align: center;
+    padding: 2px;
+    border: 1px solid #000;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.film img {
+    margin-top: -15px;
+    margin-bottom: 2px;
+}
+
+.episodeInfo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    padding: 7px;
+}
+
+.filmCard {
+    text-align: center;
+}
+
+.episodeInfo, .tecnicData {
+    margin: 15px;
+}
+
+.tecnicData {
+    display: flex;
+    background-color: #fff;
+}
+
+.tecnicData p {
+    flex-grow: 1;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5px;
+    grid-template-areas:
+    "area1 area2 area3"
+    "area1 area4 area5";
+}
+
+.card {
+    text-align: left;
+    border: 5px double #000;
+    background-color: #fff;
+}
+
+.personajes {
+    grid-area: area1;
+}
+
+.data {
+    margin-left: 25px;
+}
+
+.data p {
+    cursor: pointer;
+}
+
+.cards b {
+    margin-left: 5px;
+}
+
+/* Fondo modal: negro con opacidad al 50% */
+.modal {
+    display: none; /* Por defecto, estará oculto */
+    position: fixed; /* Posición fija */
+    z-index: 1; /* Se situará por encima de otros elementos de la página*/
+    padding-top: 50px; /* El contenido estará situado a 50px de la parte superior */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Algura completa */
+    overflow: auto; /* Se activará el scroll si es necesario */
+    background-color: rgba(0,0,0,0.5); /* Color negro con opacidad del 50% */
+}
+
+.contenido-modal {
+    position: relative; /* Relativo con respecto al contenedor -modal- */
+    background-color: white;
+    margin: auto; /* Centrada */
+    padding: 20px;
+    width: 60%;
+    -webkit-animation-name: animarsuperior;
+    -webkit-animation-duration: 0.5s;
+    animation-name: animarsuperior;
+    animation-duration: 0.5s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animarsuperior {
+from {top:-300px; opacity:0}
+to {top:0; opacity:1}
+}
+
+.cerrar {
+    color: black;
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.cerrar:hover,
+.cerrar:focus {
+color: #000;
+text-decoration: none;
+cursor: pointer;
+}
+
+.info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.info span p {
+    margin-left: 10px;
+}
